@@ -3,8 +3,11 @@ from django.db import models
 
 # Create your models here.
 class Question(models.Model):
-    pass
+    question_text = models.CharField(max_length=200)
+    publication_date = models.DateTimeField()
 
 
 class Choice(models.Model):
-    pass
+    choice_text = models.CharField(max_length=200)
+    vote = models.IntegerField(default=0)
+
